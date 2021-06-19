@@ -26,7 +26,7 @@ int mcp3202_getADCValue(mcp3202_SettingsTypeDef *mcp3202_InitStruct){
 	
 	spi_tx_data [0] = 0x00; 
 
-  HAL_SPI_TransmitReceive(global_mcp3202_InitStruct.phspi, spi_tx_data, spi_rx_data, 1, HAL_MAX_DELAY);
+  	HAL_SPI_TransmitReceive(global_mcp3202_InitStruct.phspi, spi_tx_data, spi_rx_data, 1, HAL_MAX_DELAY);
 	
 	temp = spi_rx_data[0];
 	
